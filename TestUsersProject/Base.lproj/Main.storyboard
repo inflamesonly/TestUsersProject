@@ -228,6 +228,9 @@
                                 <state key="normal" title="Update user info">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="create:" destination="NHx-DL-syZ" eventType="touchUpInside" id="k07-vD-jK6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

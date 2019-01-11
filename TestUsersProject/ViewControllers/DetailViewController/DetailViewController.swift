@@ -23,6 +23,8 @@ class DetailViewController: ParentViewController {
         self.hideKeyboardWhenTappedAround()
         self.setUserInfo()
         self.setPlaceholders()
+        
+        self.title = "\(user.firstName) \(user.lastName)"
     }
     
     private func setUserInfo () {
@@ -36,6 +38,18 @@ class DetailViewController: ParentViewController {
         self.nameTextField.infoTextField.placeholder = "Enter your name"
         self.lastNameTextField.infoTextField.placeholder = "Enter your lastname"
         self.emailTextField.infoTextField.placeholder = "Enter your email"
+    }
+    
+    @IBAction func create(_ sender: Any) {
+        self.createUser()
+    }
+    
+    func createUser () {
+        RequestManager.sharedInstance.createUser(firstName: self.nameTextField.infoTextField.text!, lastName: self.lastNameTextField.infoTextField.text!, email: self.emailTextField.infoTextField.text!, image_url: self.user.imageUrl, success: { response in
+            
+        }) { errorCode in
+            
+        }
     }
     
 }

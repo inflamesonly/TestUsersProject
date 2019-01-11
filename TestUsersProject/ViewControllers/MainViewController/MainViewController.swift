@@ -20,9 +20,11 @@ class MainViewController: ParentViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.startActivity()
         RequestManager.sharedInstance.getUsers(success: { users in
             self.users = users
             self.usersTableView.reloadData()
+            self.stopActivity()
             print("\(users)")
         }) { errorCode in
             
