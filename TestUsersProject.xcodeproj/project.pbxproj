@@ -12,6 +12,9 @@
 		10B9337821E8AC8B00E29452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B9337621E8AC8B00E29452 /* Main.storyboard */; };
 		10B9337A21E8AC8F00E29452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B9337921E8AC8F00E29452 /* Assets.xcassets */; };
 		10B9337D21E8AC8F00E29452 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10B9337B21E8AC8F00E29452 /* LaunchScreen.storyboard */; };
+		10B9338621E8B01A00E29452 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9338521E8B01A00E29452 /* RequestManager.swift */; };
+		10B9338821E8B17800E29452 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9338721E8B17800E29452 /* Constant.swift */; };
+		10B9338A21E8B26300E29452 /* RLMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9338921E8B26300E29452 /* RLMUser.swift */; };
 		2E41B63C1BE90D73F1E833CA /* Pods_TestUsersProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A546B86519D51F8DE03B00 /* Pods_TestUsersProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 		10B9337921E8AC8F00E29452 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10B9337C21E8AC8F00E29452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10B9337E21E8AC8F00E29452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10B9338521E8B01A00E29452 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		10B9338721E8B17800E29452 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		10B9338921E8B26300E29452 /* RLMUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLMUser.swift; sourceTree = "<group>"; };
 		53A546B86519D51F8DE03B00 /* Pods_TestUsersProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestUsersProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		639C32F17788AC23395E7CA3 /* Pods-TestUsersProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestUsersProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestUsersProject/Pods-TestUsersProject.release.xcconfig"; sourceTree = "<group>"; };
 		7F7B7405D0AE07ECA69FC80D /* Pods-TestUsersProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestUsersProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestUsersProject/Pods-TestUsersProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,14 +67,33 @@
 		10B9337121E8AC8A00E29452 /* TestUsersProject */ = {
 			isa = PBXGroup;
 			children = (
+				10B9338421E8B00300E29452 /* Models */,
 				10B9337221E8AC8A00E29452 /* AppDelegate.swift */,
 				10B9337421E8AC8A00E29452 /* MainViewController.swift */,
 				10B9337621E8AC8B00E29452 /* Main.storyboard */,
 				10B9337921E8AC8F00E29452 /* Assets.xcassets */,
 				10B9337B21E8AC8F00E29452 /* LaunchScreen.storyboard */,
 				10B9337E21E8AC8F00E29452 /* Info.plist */,
+				10B9338721E8B17800E29452 /* Constant.swift */,
 			);
 			path = TestUsersProject;
+			sourceTree = "<group>";
+		};
+		10B9338421E8B00300E29452 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				10B9338B21E8B4BF00E29452 /* RLM */,
+				10B9338521E8B01A00E29452 /* RequestManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		10B9338B21E8B4BF00E29452 /* RLM */ = {
+			isa = PBXGroup;
+			children = (
+				10B9338921E8B26300E29452 /* RLMUser.swift */,
+			);
+			path = RLM;
 			sourceTree = "<group>";
 		};
 		9379398CFD3F3CF8ACB170DD /* Pods */ = {
@@ -206,8 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B9338621E8B01A00E29452 /* RequestManager.swift in Sources */,
 				10B9337521E8AC8A00E29452 /* MainViewController.swift in Sources */,
 				10B9337321E8AC8A00E29452 /* AppDelegate.swift in Sources */,
+				10B9338821E8B17800E29452 /* Constant.swift in Sources */,
+				10B9338A21E8B26300E29452 /* RLMUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,11 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        RequestManager.sharedInstance.getUsers(success: { users in
+            print("\(users)")
+        }) { errorCode in
+            
+        }
     }
 
 
