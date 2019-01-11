@@ -12,7 +12,7 @@ import RealmSwift
 class RLMUser: Object {
     @objc dynamic var uiid = UUID().uuidString
     @objc dynamic var id = 0
-    @objc dynamic var firstТame = ""
+    @objc dynamic var firstName = ""
     @objc dynamic var lastName = ""
     @objc dynamic var email = ""
     @objc dynamic var imageUrl = ""
@@ -26,7 +26,7 @@ class RLMUser: Object {
     convenience init(response : Dictionary<String, Any>) {
         self.init()
         self.id = response ["id"] as? Int ?? 0
-        self.firstТame = response ["first_name"] as? String ?? ""
+        self.firstName = response ["first_name"] as? String ?? ""
         self.lastName = response ["last_name"] as? String ?? ""
         self.email = response ["email"] as? String ?? ""
         self.imageUrl = response ["image_url"] as? String ?? ""

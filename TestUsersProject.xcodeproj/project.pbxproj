@@ -15,6 +15,9 @@
 		10B9338621E8B01A00E29452 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9338521E8B01A00E29452 /* RequestManager.swift */; };
 		10B9338821E8B17800E29452 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9338721E8B17800E29452 /* Constant.swift */; };
 		10B9338A21E8B26300E29452 /* RLMUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9338921E8B26300E29452 /* RLMUser.swift */; };
+		10B9339A21E8CA4C00E29452 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9339921E8CA4C00E29452 /* UserCell.swift */; };
+		10B9339D21E8CE2E00E29452 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9339C21E8CE2E00E29452 /* AvatarView.swift */; };
+		10B9339F21E8CF8000E29452 /* BckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9339E21E8CF8000E29452 /* BckView.swift */; };
 		2E41B63C1BE90D73F1E833CA /* Pods_TestUsersProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A546B86519D51F8DE03B00 /* Pods_TestUsersProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,16 @@
 		10B9338521E8B01A00E29452 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		10B9338721E8B17800E29452 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		10B9338921E8B26300E29452 /* RLMUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLMUser.swift; sourceTree = "<group>"; };
+		10B9339021E8C52500E29452 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		10B9339121E8C52500E29452 /* ProductSans.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProductSans.otf; sourceTree = "<group>"; };
+		10B9339221E8C52600E29452 /* ProximaNovaSoft-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaSoft-Bold.ttf"; sourceTree = "<group>"; };
+		10B9339321E8C52600E29452 /* ProximaNovaExCn-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaExCn-Regular.ttf"; sourceTree = "<group>"; };
+		10B9339421E8C52600E29452 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		10B9339521E8C52700E29452 /* ProximaNovaExCn-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaExCn-Bold.ttf"; sourceTree = "<group>"; };
+		10B9339621E8C52700E29452 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
+		10B9339921E8CA4C00E29452 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		10B9339C21E8CE2E00E29452 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		10B9339E21E8CF8000E29452 /* BckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BckView.swift; sourceTree = "<group>"; };
 		53A546B86519D51F8DE03B00 /* Pods_TestUsersProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestUsersProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		639C32F17788AC23395E7CA3 /* Pods-TestUsersProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestUsersProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestUsersProject/Pods-TestUsersProject.release.xcconfig"; sourceTree = "<group>"; };
 		7F7B7405D0AE07ECA69FC80D /* Pods-TestUsersProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestUsersProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestUsersProject/Pods-TestUsersProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,13 +80,11 @@
 		10B9337121E8AC8A00E29452 /* TestUsersProject */ = {
 			isa = PBXGroup;
 			children = (
+				10B9338D21E8C4F200E29452 /* Resources */,
 				10B9338421E8B00300E29452 /* Models */,
 				10B9337221E8AC8A00E29452 /* AppDelegate.swift */,
-				10B9337421E8AC8A00E29452 /* MainViewController.swift */,
-				10B9337621E8AC8B00E29452 /* Main.storyboard */,
-				10B9337921E8AC8F00E29452 /* Assets.xcassets */,
-				10B9337B21E8AC8F00E29452 /* LaunchScreen.storyboard */,
 				10B9337E21E8AC8F00E29452 /* Info.plist */,
+				10B9337621E8AC8B00E29452 /* Main.storyboard */,
 				10B9338721E8B17800E29452 /* Constant.swift */,
 			);
 			path = TestUsersProject;
@@ -82,6 +93,7 @@
 		10B9338421E8B00300E29452 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				10B9339821E8CA3000E29452 /* MainViewController */,
 				10B9338B21E8B4BF00E29452 /* RLM */,
 				10B9338521E8B01A00E29452 /* RequestManager.swift */,
 			);
@@ -94,6 +106,49 @@
 				10B9338921E8B26300E29452 /* RLMUser.swift */,
 			);
 			path = RLM;
+			sourceTree = "<group>";
+		};
+		10B9338D21E8C4F200E29452 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				10B9339721E8C53400E29452 /* Fonts */,
+				10B9337921E8AC8F00E29452 /* Assets.xcassets */,
+				10B9337B21E8AC8F00E29452 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		10B9339721E8C53400E29452 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				10B9339621E8C52700E29452 /* Gilroy-ExtraBold.otf */,
+				10B9339121E8C52500E29452 /* ProductSans.otf */,
+				10B9339521E8C52700E29452 /* ProximaNovaExCn-Bold.ttf */,
+				10B9339321E8C52600E29452 /* ProximaNovaExCn-Regular.ttf */,
+				10B9339221E8C52600E29452 /* ProximaNovaSoft-Bold.ttf */,
+				10B9339021E8C52500E29452 /* Rubik-Medium.ttf */,
+				10B9339421E8C52600E29452 /* Rubik-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		10B9339821E8CA3000E29452 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				10B9339B21E8CDF900E29452 /* UI */,
+				10B9337421E8AC8A00E29452 /* MainViewController.swift */,
+				10B9339921E8CA4C00E29452 /* UserCell.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		10B9339B21E8CDF900E29452 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				10B9339C21E8CE2E00E29452 /* AvatarView.swift */,
+				10B9339E21E8CF8000E29452 /* BckView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		9379398CFD3F3CF8ACB170DD /* Pods */ = {
@@ -233,6 +288,9 @@
 			files = (
 				10B9338621E8B01A00E29452 /* RequestManager.swift in Sources */,
 				10B9337521E8AC8A00E29452 /* MainViewController.swift in Sources */,
+				10B9339D21E8CE2E00E29452 /* AvatarView.swift in Sources */,
+				10B9339F21E8CF8000E29452 /* BckView.swift in Sources */,
+				10B9339A21E8CA4C00E29452 /* UserCell.swift in Sources */,
 				10B9337321E8AC8A00E29452 /* AppDelegate.swift in Sources */,
 				10B9338821E8B17800E29452 /* Constant.swift in Sources */,
 				10B9338A21E8B26300E29452 /* RLMUser.swift in Sources */,
