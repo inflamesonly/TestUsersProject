@@ -2,30 +2,38 @@ PODS:
   - Alamofire (4.8.0)
   - AlamofireImage (3.5.0):
     - Alamofire (~> 4.8)
+  - IQKeyboardManagerSwift (6.0.5)
   - Realm (3.13.1):
     - Realm/Headers (= 3.13.1)
   - Realm/Headers (3.13.1)
   - RealmSwift (3.13.1):
     - Realm (= 3.13.1)
+  - SpringIndicator (4.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.0)
   - AlamofireImage (~> 3.5.0)
+  - IQKeyboardManagerSwift (~> 6.0.4)
   - RealmSwift (~> 3.13.1)
+  - SpringIndicator (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - IQKeyboardManagerSwift
     - Realm
     - RealmSwift
+    - SpringIndicator
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
+  IQKeyboardManagerSwift: c14eca30f6001457d6ddf25e313f23fb6578c41c
   Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
   RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  SpringIndicator: 96eb6158a9dc94c1623d84130639a52225f04056
 
-PODFILE CHECKSUM: d77486de36bc3b47614a5df9980ff7825fc46f19
+PODFILE CHECKSUM: 43d3e02e40ab7784532990751ddbcdf8720c7561
 
 COCOAPODS: 1.5.3

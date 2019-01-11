@@ -8,12 +8,15 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+let link_segue = "showUserDetail"
+
+class MainViewController: ParentViewController {
     
     @IBOutlet weak var usersTableView: UITableView!
     
     var users = [RLMUser]()
     var selectedUser : RLMUser?
+    var selectedImage : UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,14 @@ class MainViewController: UIViewController {
             print("\(users)")
         }) { errorCode in
             
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == link_segue {
+            let vc = segue.destination as! DetailViewController
+            vc.avatar = self.selectedImage
+            vc.user = self.selectedUser
         }
     }
 }
@@ -45,11 +56,10 @@ extension MainViewController : UITableViewDataSource {
 extension MainViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! UserCell
-//        cell.bckView.se
-
-//        let feed = feeds[indexPath.row]
-//        self.selectedFeed = feed
-//        performSegue(withIdentifier: link_segue, sender: self)
+        let user = users[indexPath.row]
+        self.selectedImage = cell.avatarImageView.image
+        self.selectedUser = user
+        performSegue(withIdentifier: link_segue, sender: self)
     }
 }
 

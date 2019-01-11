@@ -18,6 +18,12 @@
 		10B9339A21E8CA4C00E29452 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9339921E8CA4C00E29452 /* UserCell.swift */; };
 		10B9339D21E8CE2E00E29452 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9339C21E8CE2E00E29452 /* AvatarView.swift */; };
 		10B9339F21E8CF8000E29452 /* BckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9339E21E8CF8000E29452 /* BckView.swift */; };
+		10B933A321E8D87500E29452 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B933A221E8D87500E29452 /* DetailViewController.swift */; };
+		10B933A621E8D8C300E29452 /* InfoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B933A521E8D8C300E29452 /* InfoTextView.swift */; };
+		10B933A821E8D8FF00E29452 /* InfoTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B933A721E8D8FF00E29452 /* InfoTextView.xib */; };
+		10B933AA21E8DC3200E29452 /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B933A921E8DC3200E29452 /* HideKeyboard.swift */; };
+		10B933AD21E8E30B00E29452 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B933AC21E8E30B00E29452 /* RoundButton.swift */; };
+		10B933AF21E8E66200E29452 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B933AE21E8E66200E29452 /* ParentViewController.swift */; };
 		2E41B63C1BE90D73F1E833CA /* Pods_TestUsersProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A546B86519D51F8DE03B00 /* Pods_TestUsersProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +48,12 @@
 		10B9339921E8CA4C00E29452 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		10B9339C21E8CE2E00E29452 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		10B9339E21E8CF8000E29452 /* BckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BckView.swift; sourceTree = "<group>"; };
+		10B933A221E8D87500E29452 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		10B933A521E8D8C300E29452 /* InfoTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTextView.swift; sourceTree = "<group>"; };
+		10B933A721E8D8FF00E29452 /* InfoTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTextView.xib; sourceTree = "<group>"; };
+		10B933A921E8DC3200E29452 /* HideKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
+		10B933AC21E8E30B00E29452 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		10B933AE21E8E66200E29452 /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		53A546B86519D51F8DE03B00 /* Pods_TestUsersProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestUsersProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		639C32F17788AC23395E7CA3 /* Pods-TestUsersProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestUsersProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestUsersProject/Pods-TestUsersProject.release.xcconfig"; sourceTree = "<group>"; };
 		7F7B7405D0AE07ECA69FC80D /* Pods-TestUsersProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestUsersProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestUsersProject/Pods-TestUsersProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,8 +92,10 @@
 		10B9337121E8AC8A00E29452 /* TestUsersProject */ = {
 			isa = PBXGroup;
 			children = (
-				10B9338D21E8C4F200E29452 /* Resources */,
+				10B933A921E8DC3200E29452 /* HideKeyboard.swift */,
+				10B933A021E8D80200E29452 /* ViewControllers */,
 				10B9338421E8B00300E29452 /* Models */,
+				10B9338D21E8C4F200E29452 /* Resources */,
 				10B9337221E8AC8A00E29452 /* AppDelegate.swift */,
 				10B9337E21E8AC8F00E29452 /* Info.plist */,
 				10B9337621E8AC8B00E29452 /* Main.storyboard */,
@@ -93,7 +107,6 @@
 		10B9338421E8B00300E29452 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				10B9339821E8CA3000E29452 /* MainViewController */,
 				10B9338B21E8B4BF00E29452 /* RLM */,
 				10B9338521E8B01A00E29452 /* RequestManager.swift */,
 			);
@@ -149,6 +162,43 @@
 				10B9339E21E8CF8000E29452 /* BckView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		10B933A021E8D80200E29452 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				10B933AE21E8E66200E29452 /* ParentViewController.swift */,
+				10B933A121E8D85200E29452 /* DetailViewController */,
+				10B9339821E8CA3000E29452 /* MainViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		10B933A121E8D85200E29452 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				10B933A421E8D88500E29452 /* UI */,
+				10B933A221E8D87500E29452 /* DetailViewController.swift */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
+		10B933A421E8D88500E29452 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				10B933AB21E8E2E400E29452 /* InfoTextView */,
+				10B933AC21E8E30B00E29452 /* RoundButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		10B933AB21E8E2E400E29452 /* InfoTextView */ = {
+			isa = PBXGroup;
+			children = (
+				10B933A521E8D8C300E29452 /* InfoTextView.swift */,
+				10B933A721E8D8FF00E29452 /* InfoTextView.xib */,
+			);
+			path = InfoTextView;
 			sourceTree = "<group>";
 		};
 		9379398CFD3F3CF8ACB170DD /* Pods */ = {
@@ -229,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10B9337D21E8AC8F00E29452 /* LaunchScreen.storyboard in Resources */,
+				10B933A821E8D8FF00E29452 /* InfoTextView.xib in Resources */,
 				10B9337A21E8AC8F00E29452 /* Assets.xcassets in Resources */,
 				10B9337821E8AC8B00E29452 /* Main.storyboard in Resources */,
 			);
@@ -246,15 +297,19 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestUsersProject/Pods-TestUsersProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SpringIndicator/SpringIndicator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpringIndicator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -286,10 +341,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B933AD21E8E30B00E29452 /* RoundButton.swift in Sources */,
+				10B933AA21E8DC3200E29452 /* HideKeyboard.swift in Sources */,
+				10B933A321E8D87500E29452 /* DetailViewController.swift in Sources */,
 				10B9338621E8B01A00E29452 /* RequestManager.swift in Sources */,
 				10B9337521E8AC8A00E29452 /* MainViewController.swift in Sources */,
 				10B9339D21E8CE2E00E29452 /* AvatarView.swift in Sources */,
 				10B9339F21E8CF8000E29452 /* BckView.swift in Sources */,
+				10B933A621E8D8C300E29452 /* InfoTextView.swift in Sources */,
+				10B933AF21E8E66200E29452 /* ParentViewController.swift in Sources */,
 				10B9339A21E8CA4C00E29452 /* UserCell.swift in Sources */,
 				10B9337321E8AC8A00E29452 /* AppDelegate.swift in Sources */,
 				10B9338821E8B17800E29452 /* Constant.swift in Sources */,

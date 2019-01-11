@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Users-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="TestUsersProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykk-hG-0oe" customClass="BckView" customModule="TestUsersProject" customModuleProvider="target">
                                                     <rect key="frame" x="16" y="12" width="343" height="138"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pyn-15-xhJ" customClass="AvatarView" customModule="TestUsersProject" customModuleProvider="target">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pyn-15-xhJ" customClass="AvatarView" customModule="TestUsersProject" customModuleProvider="target">
                                                             <rect key="frame" x="16" y="16" width="64" height="64"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="64" id="HCW-br-7V2"/>
@@ -173,14 +173,92 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FtF-UL-g4Q"/>
+                    <navigationItem key="navigationItem" title="Users" id="FtF-UL-g4Q"/>
                     <connections>
                         <outlet property="usersTableView" destination="aRr-B2-Z6F" id="cRC-e6-ugw"/>
+                        <segue destination="NHx-DL-syZ" kind="show" identifier="showUserDetail" id="Fxs-P4-XvN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1000.8" y="74.212893553223395"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Rvc-Yg-w2t">
+            <objects>
+                <viewController id="NHx-DL-syZ" customClass="DetailViewController" customModule="TestUsersProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kUa-PG-yP3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yvn-UP-qE4" customClass="AvatarView" customModule="TestUsersProject" customModuleProvider="target">
+                                <rect key="frame" x="92.5" y="104" width="190" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="O5W-YH-eRi"/>
+                                    <constraint firstAttribute="height" constant="190" id="X9g-Ol-xEz"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBO-h8-rk9" customClass="InfoTextView" customModule="TestUsersProject" customModuleProvider="target">
+                                <rect key="frame" x="16" y="310" width="343" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="kxv-mj-e9i"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fd4-vl-2hn" customClass="InfoTextView" customModule="TestUsersProject" customModuleProvider="target">
+                                <rect key="frame" x="16" y="374" width="343" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="deQ-Zs-RYL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFa-a0-9bU" customClass="InfoTextView" customModule="TestUsersProject" customModuleProvider="target">
+                                <rect key="frame" x="16" y="438" width="343" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="euk-xu-Zgg"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5b-xg-pyj" customClass="RoundButton" customModule="TestUsersProject" customModuleProvider="target">
+                                <rect key="frame" x="16" y="571" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="ggS-Lz-5Qk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Update user info">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zFa-a0-9bU" firstAttribute="trailing" secondItem="fd4-vl-2hn" secondAttribute="trailing" id="51C-BW-juH"/>
+                            <constraint firstItem="J5b-xg-pyj" firstAttribute="leading" secondItem="zFa-a0-9bU" secondAttribute="leading" id="71X-Gz-4hU"/>
+                            <constraint firstItem="fd4-vl-2hn" firstAttribute="top" secondItem="nBO-h8-rk9" secondAttribute="bottom" constant="16" id="BOa-Rz-d0T"/>
+                            <constraint firstItem="J5b-xg-pyj" firstAttribute="trailing" secondItem="zFa-a0-9bU" secondAttribute="trailing" id="BQA-rR-8bH"/>
+                            <constraint firstItem="eWd-vG-NYl" firstAttribute="bottom" secondItem="J5b-xg-pyj" secondAttribute="bottom" constant="48" id="ECx-9l-98J"/>
+                            <constraint firstItem="fd4-vl-2hn" firstAttribute="leading" secondItem="nBO-h8-rk9" secondAttribute="leading" id="Khq-8Q-9Zd"/>
+                            <constraint firstItem="eWd-vG-NYl" firstAttribute="trailing" secondItem="nBO-h8-rk9" secondAttribute="trailing" constant="16" id="Pf0-va-Lor"/>
+                            <constraint firstItem="nBO-h8-rk9" firstAttribute="leading" secondItem="eWd-vG-NYl" secondAttribute="leading" constant="16" id="bih-z2-csv"/>
+                            <constraint firstItem="Yvn-UP-qE4" firstAttribute="centerX" secondItem="eWd-vG-NYl" secondAttribute="centerX" id="dgE-bq-iao"/>
+                            <constraint firstItem="zFa-a0-9bU" firstAttribute="top" secondItem="fd4-vl-2hn" secondAttribute="bottom" constant="16" id="f8v-So-lEb"/>
+                            <constraint firstItem="nBO-h8-rk9" firstAttribute="top" secondItem="Yvn-UP-qE4" secondAttribute="bottom" constant="16" id="fGb-RS-VD3"/>
+                            <constraint firstItem="fd4-vl-2hn" firstAttribute="trailing" secondItem="nBO-h8-rk9" secondAttribute="trailing" id="kRh-nJ-fq5"/>
+                            <constraint firstItem="zFa-a0-9bU" firstAttribute="leading" secondItem="fd4-vl-2hn" secondAttribute="leading" id="mSP-Tq-RM2"/>
+                            <constraint firstItem="Yvn-UP-qE4" firstAttribute="top" secondItem="eWd-vG-NYl" secondAttribute="top" constant="40" id="oVi-tW-LAE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eWd-vG-NYl"/>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="Yvn-UP-qE4" id="P0j-GM-T3Q"/>
+                        <outlet property="emailTextField" destination="zFa-a0-9bU" id="gYa-To-0Tw"/>
+                        <outlet property="lastNameTextField" destination="fd4-vl-2hn" id="aA5-XQ-x2u"/>
+                        <outlet property="nameTextField" destination="nBO-h8-rk9" id="ghP-PY-RqV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80d-ZZ-hWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869.5999999999999" y="73.313343328335833"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m4Q-Bx-5uM">

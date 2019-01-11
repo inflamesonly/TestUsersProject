@@ -33,7 +33,7 @@ class UserCell: UITableViewCell {
         if path != "" {
             self.addAvatar(path: path)
         } else {
-            //todo plaseholder
+            self.avatarImageView.image = UIImage(named: "Placeholder")
         }
     }
     

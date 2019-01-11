@@ -8,18 +8,11 @@
 
 import UIKit
 
-private let SELECTEDCOLOR = UIColor(red:251/255, green:253/255, blue:254/255, alpha: 1)
-
 class BckView: UIView {
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        updateCornerRadius()
-    }
     
     @IBInspectable var borderRadius: CGFloat = 0 {
         didSet {
-            updateCornerRadius()
+            layer.cornerRadius = borderRadius
         }
     }
     
@@ -75,17 +68,5 @@ class BckView: UIView {
         set {
             layer.shadowRadius = CGFloat(newValue)
         }
-    }
-    
-    func updateCornerRadius() {
-        layer.cornerRadius = borderRadius
-    }
-    
-    func setSelected () {
-        self.backgroundColor = SELECTEDCOLOR
-    }
-    
-    func setDeselected () {
-        self.backgroundColor = UIColor.white
     }
 }
