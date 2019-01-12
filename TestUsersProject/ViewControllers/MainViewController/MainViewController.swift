@@ -8,7 +8,7 @@
 
 import UIKit
 
-let link_segue = "showUserDetail"
+let user_segue = "showUserDetail"
 
 class MainViewController: ParentViewController {
     
@@ -17,25 +17,53 @@ class MainViewController: ParentViewController {
     var users = [RLMUser]()
     var selectedUser : RLMUser?
     var selectedImage : UIImage?
+    var isNewUser : Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.startActivity()
+        self.configMainNavigationButtons()
+        self.checkInternetConnection()
+    }
+    
+    @objc func addNewUser() {
+        self.isNewUser = true
+        performSegue(withIdentifier: user_segue, sender: self)
+    }
+    
+    private func checkInternetConnection () {
+        if Reachability.isConnectedToNetwork() {
+            self.startActivity()
+            self.getUsers()
+        } else {
+            self.presentAlert(withTitle: "Error", message: "Internet connection error. All users will be upload from data base.")
+            self.getLocalUsers()
+        }
+    }
+    
+    func getLocalUsers () {
+        let users = RLMUser.getAllUsers()
+        self.users = users
+        self.usersTableView.reloadData()
+    }
+    
+    private func getUsers () {
         RequestManager.sharedInstance.getUsers(success: { users in
             self.users = users
             self.usersTableView.reloadData()
             self.stopActivity()
-            print("\(users)")
         }) { errorCode in
-            
+            self.presentAlert(withTitle: "Error", message: "Server error!")
+            self.stopActivity()
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == link_segue {
+        if segue.identifier == user_segue {
             let vc = segue.destination as! DetailViewController
             vc.avatar = self.selectedImage
             vc.user = self.selectedUser
+            vc.isNewUser = self.isNewUser
+            vc.delegate = self
         }
     }
 }
@@ -61,7 +89,26 @@ extension MainViewController : UITableViewDelegate {
         let user = users[indexPath.row]
         self.selectedImage = cell.avatarImageView.image
         self.selectedUser = user
-        performSegue(withIdentifier: link_segue, sender: self)
+        self.isNewUser = false
+        performSegue(withIdentifier: user_segue, sender: self)
+    }
+}
+
+extension MainViewController : DetailViewControllerDelegate {
+    func needUpdateTableView () {
+        self.getUsers()
+    }
+    
+    func needUpdateTableView (user : RLMUser) {
+        self.findUserAndReplaseHim(user: user)
+        self.usersTableView.reloadData()
+    }
+    
+    func findUserAndReplaseHim (user : RLMUser) {
+        if let index = self.users.index(of: user) {
+            let needUser = RLMUser().get(id: self.users[index].id)
+            self.users[index] = needUser
+        }
     }
 }
 

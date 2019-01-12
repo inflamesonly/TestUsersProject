@@ -24,6 +24,15 @@
 		10B933AA21E8DC3200E29452 /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B933A921E8DC3200E29452 /* HideKeyboard.swift */; };
 		10B933AD21E8E30B00E29452 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B933AC21E8E30B00E29452 /* RoundButton.swift */; };
 		10B933AF21E8E66200E29452 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B933AE21E8E66200E29452 /* ParentViewController.swift */; };
+		10E647B721E9F20300AB5312 /* AlertViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E647B521E9F20300AB5312 /* AlertViewExt.swift */; };
+		10E647B921E9F27D00AB5312 /* CurrentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E647B821E9F27D00AB5312 /* CurrentViewController.swift */; };
+		10E647BB21E9F46000AB5312 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E647BA21E9F46000AB5312 /* EmailValidator.swift */; };
+		10E647BD21E9F80500AB5312 /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E647BC21E9F80500AB5312 /* Rechability.swift */; };
+		10E647C121EA1F7000AB5312 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E647C021EA1F7000AB5312 /* Image.swift */; };
+		10E647C321EA24D700AB5312 /* AvatarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E647C221EA24D700AB5312 /* AvatarsViewController.swift */; };
+		10E647C521EA273400AB5312 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E647C421EA273400AB5312 /* AvatarCell.swift */; };
+		10E647C721EA2D4600AB5312 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E647C621EA2D4600AB5312 /* AvatarImageView.swift */; };
+		10E647CB21EA352D00AB5312 /* CurrentDateFormatExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E647CA21EA331F00AB5312 /* CurrentDateFormatExt.swift */; };
 		2E41B63C1BE90D73F1E833CA /* Pods_TestUsersProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A546B86519D51F8DE03B00 /* Pods_TestUsersProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +63,15 @@
 		10B933A921E8DC3200E29452 /* HideKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 		10B933AC21E8E30B00E29452 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		10B933AE21E8E66200E29452 /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
+		10E647B521E9F20300AB5312 /* AlertViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewExt.swift; sourceTree = "<group>"; };
+		10E647B821E9F27D00AB5312 /* CurrentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentViewController.swift; sourceTree = "<group>"; };
+		10E647BA21E9F46000AB5312 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		10E647BC21E9F80500AB5312 /* Rechability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
+		10E647C021EA1F7000AB5312 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		10E647C221EA24D700AB5312 /* AvatarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarsViewController.swift; sourceTree = "<group>"; };
+		10E647C421EA273400AB5312 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		10E647C621EA2D4600AB5312 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		10E647CA21EA331F00AB5312 /* CurrentDateFormatExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateFormatExt.swift; sourceTree = "<group>"; };
 		53A546B86519D51F8DE03B00 /* Pods_TestUsersProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestUsersProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		639C32F17788AC23395E7CA3 /* Pods-TestUsersProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestUsersProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestUsersProject/Pods-TestUsersProject.release.xcconfig"; sourceTree = "<group>"; };
 		7F7B7405D0AE07ECA69FC80D /* Pods-TestUsersProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestUsersProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestUsersProject/Pods-TestUsersProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,14 +110,14 @@
 		10B9337121E8AC8A00E29452 /* TestUsersProject */ = {
 			isa = PBXGroup;
 			children = (
-				10B933A921E8DC3200E29452 /* HideKeyboard.swift */,
+				10B9337221E8AC8A00E29452 /* AppDelegate.swift */,
+				10B9338721E8B17800E29452 /* Constant.swift */,
+				10E647C921EA331700AB5312 /* Extentions */,
 				10B933A021E8D80200E29452 /* ViewControllers */,
 				10B9338421E8B00300E29452 /* Models */,
 				10B9338D21E8C4F200E29452 /* Resources */,
-				10B9337221E8AC8A00E29452 /* AppDelegate.swift */,
 				10B9337E21E8AC8F00E29452 /* Info.plist */,
 				10B9337621E8AC8B00E29452 /* Main.storyboard */,
-				10B9338721E8B17800E29452 /* Constant.swift */,
 			);
 			path = TestUsersProject;
 			sourceTree = "<group>";
@@ -109,6 +127,7 @@
 			children = (
 				10B9338B21E8B4BF00E29452 /* RLM */,
 				10B9338521E8B01A00E29452 /* RequestManager.swift */,
+				10E647C021EA1F7000AB5312 /* Image.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,8 +187,9 @@
 			isa = PBXGroup;
 			children = (
 				10B933AE21E8E66200E29452 /* ParentViewController.swift */,
-				10B933A121E8D85200E29452 /* DetailViewController */,
 				10B9339821E8CA3000E29452 /* MainViewController */,
+				10B933A121E8D85200E29452 /* DetailViewController */,
+				10E647C821EA32F500AB5312 /* AvatarViewViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -188,6 +208,7 @@
 			children = (
 				10B933AB21E8E2E400E29452 /* InfoTextView */,
 				10B933AC21E8E30B00E29452 /* RoundButton.swift */,
+				10E647C621EA2D4600AB5312 /* AvatarImageView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -199,6 +220,28 @@
 				10B933A721E8D8FF00E29452 /* InfoTextView.xib */,
 			);
 			path = InfoTextView;
+			sourceTree = "<group>";
+		};
+		10E647C821EA32F500AB5312 /* AvatarViewViewController */ = {
+			isa = PBXGroup;
+			children = (
+				10E647C221EA24D700AB5312 /* AvatarsViewController.swift */,
+				10E647C421EA273400AB5312 /* AvatarCell.swift */,
+			);
+			path = AvatarViewViewController;
+			sourceTree = "<group>";
+		};
+		10E647C921EA331700AB5312 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				10B933A921E8DC3200E29452 /* HideKeyboard.swift */,
+				10E647B521E9F20300AB5312 /* AlertViewExt.swift */,
+				10E647BA21E9F46000AB5312 /* EmailValidator.swift */,
+				10E647BC21E9F80500AB5312 /* Rechability.swift */,
+				10E647CA21EA331F00AB5312 /* CurrentDateFormatExt.swift */,
+				10E647B821E9F27D00AB5312 /* CurrentViewController.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		9379398CFD3F3CF8ACB170DD /* Pods */ = {
@@ -343,17 +386,26 @@
 			files = (
 				10B933AD21E8E30B00E29452 /* RoundButton.swift in Sources */,
 				10B933AA21E8DC3200E29452 /* HideKeyboard.swift in Sources */,
+				10E647CB21EA352D00AB5312 /* CurrentDateFormatExt.swift in Sources */,
 				10B933A321E8D87500E29452 /* DetailViewController.swift in Sources */,
+				10E647C721EA2D4600AB5312 /* AvatarImageView.swift in Sources */,
 				10B9338621E8B01A00E29452 /* RequestManager.swift in Sources */,
 				10B9337521E8AC8A00E29452 /* MainViewController.swift in Sources */,
 				10B9339D21E8CE2E00E29452 /* AvatarView.swift in Sources */,
+				10E647BD21E9F80500AB5312 /* Rechability.swift in Sources */,
+				10E647BB21E9F46000AB5312 /* EmailValidator.swift in Sources */,
 				10B9339F21E8CF8000E29452 /* BckView.swift in Sources */,
 				10B933A621E8D8C300E29452 /* InfoTextView.swift in Sources */,
+				10E647B921E9F27D00AB5312 /* CurrentViewController.swift in Sources */,
 				10B933AF21E8E66200E29452 /* ParentViewController.swift in Sources */,
+				10E647C121EA1F7000AB5312 /* Image.swift in Sources */,
 				10B9339A21E8CA4C00E29452 /* UserCell.swift in Sources */,
+				10E647C321EA24D700AB5312 /* AvatarsViewController.swift in Sources */,
+				10E647C521EA273400AB5312 /* AvatarCell.swift in Sources */,
 				10B9337321E8AC8A00E29452 /* AppDelegate.swift in Sources */,
 				10B9338821E8B17800E29452 /* Constant.swift in Sources */,
 				10B9338A21E8B26300E29452 /* RLMUser.swift in Sources */,
+				10E647B721E9F20300AB5312 /* AlertViewExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,32 +22,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TestUsersProject/Models/RequestManager.swift"
-            timestampString = "568915135.126379"
+            filePath = "TestUsersProject/ViewControllers/DetailViewController/DetailViewController.swift"
+            timestampString = "568998885.221645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "createUser(firstName:lastName:email:image_url:success:failure:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TestUsersProject/Models/RequestManager.swift"
-            timestampString = "568915135.126516"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "createUser(firstName:lastName:email:image_url:success:failure:)"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "setNewAvatar(image:imageURL:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

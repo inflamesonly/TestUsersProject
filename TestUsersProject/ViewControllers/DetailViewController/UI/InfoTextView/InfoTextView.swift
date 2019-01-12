@@ -30,12 +30,6 @@ class InfoTextView: UIView {
             layer.borderColor = newValue?.cgColor
         }
     }
-    
-//    @IBInspectable var borderRadius: CGFloat = 0 {
-//        didSet {
-//            layer.cornerRadius = borderRadius
-//        }
-//    }
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!

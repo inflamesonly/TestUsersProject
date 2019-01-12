@@ -191,7 +191,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yvn-UP-qE4" customClass="AvatarView" customModule="TestUsersProject" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlaceholderAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="Yvn-UP-qE4" customClass="NewAvatarImageView" customModule="TestUsersProject" customModuleProvider="target">
                                 <rect key="frame" x="92.5" y="104" width="190" height="190"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="190" id="O5W-YH-eRi"/>
@@ -220,7 +220,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5b-xg-pyj" customClass="RoundButton" customModule="TestUsersProject" customModuleProvider="target">
-                                <rect key="frame" x="16" y="571" width="343" height="48"/>
+                                <rect key="frame" x="16" y="510" width="343" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="ggS-Lz-5Qk"/>
                                 </constraints>
@@ -237,9 +237,9 @@
                         <constraints>
                             <constraint firstItem="zFa-a0-9bU" firstAttribute="trailing" secondItem="fd4-vl-2hn" secondAttribute="trailing" id="51C-BW-juH"/>
                             <constraint firstItem="J5b-xg-pyj" firstAttribute="leading" secondItem="zFa-a0-9bU" secondAttribute="leading" id="71X-Gz-4hU"/>
+                            <constraint firstItem="J5b-xg-pyj" firstAttribute="top" secondItem="zFa-a0-9bU" secondAttribute="bottom" constant="24" id="B9I-7m-f90"/>
                             <constraint firstItem="fd4-vl-2hn" firstAttribute="top" secondItem="nBO-h8-rk9" secondAttribute="bottom" constant="16" id="BOa-Rz-d0T"/>
                             <constraint firstItem="J5b-xg-pyj" firstAttribute="trailing" secondItem="zFa-a0-9bU" secondAttribute="trailing" id="BQA-rR-8bH"/>
-                            <constraint firstItem="eWd-vG-NYl" firstAttribute="bottom" secondItem="J5b-xg-pyj" secondAttribute="bottom" constant="48" id="ECx-9l-98J"/>
                             <constraint firstItem="fd4-vl-2hn" firstAttribute="leading" secondItem="nBO-h8-rk9" secondAttribute="leading" id="Khq-8Q-9Zd"/>
                             <constraint firstItem="eWd-vG-NYl" firstAttribute="trailing" secondItem="nBO-h8-rk9" secondAttribute="trailing" constant="16" id="Pf0-va-Lor"/>
                             <constraint firstItem="nBO-h8-rk9" firstAttribute="leading" secondItem="eWd-vG-NYl" secondAttribute="leading" constant="16" id="bih-z2-csv"/>
@@ -253,15 +253,76 @@
                         <viewLayoutGuide key="safeArea" id="eWd-vG-NYl"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="J5b-xg-pyj" id="bfd-ML-HnM"/>
                         <outlet property="avatarImageView" destination="Yvn-UP-qE4" id="P0j-GM-T3Q"/>
                         <outlet property="emailTextField" destination="zFa-a0-9bU" id="gYa-To-0Tw"/>
                         <outlet property="lastNameTextField" destination="fd4-vl-2hn" id="aA5-XQ-x2u"/>
                         <outlet property="nameTextField" destination="nBO-h8-rk9" id="ghP-PY-RqV"/>
+                        <segue destination="zpi-iR-wBi" kind="show" identifier="showUserAvatar" id="NgB-K7-ZUV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80d-ZZ-hWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1869.5999999999999" y="73.313343328335833"/>
+            <point key="canvasLocation" x="1887" y="74"/>
+        </scene>
+        <!--Avatars View Controller-->
+        <scene sceneID="vf1-SE-mxT">
+            <objects>
+                <viewController id="zpi-iR-wBi" customClass="AvatarsViewController" customModule="TestUsersProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W1s-KY-wSK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZWx-Gs-607">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="s60-ac-9BM">
+                                    <size key="itemSize" width="374" height="256"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AvatarCell" id="raM-tp-f3N" customClass="AvatarCell" customModule="TestUsersProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.5" y="0.0" width="374" height="256"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="256"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Rg-cZ-CMb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="256"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="1Rg-cZ-CMb" secondAttribute="trailing" id="Bmp-zx-mi8"/>
+                                            <constraint firstItem="1Rg-cZ-CMb" firstAttribute="leading" secondItem="raM-tp-f3N" secondAttribute="leading" id="VWo-9K-tVW"/>
+                                            <constraint firstItem="1Rg-cZ-CMb" firstAttribute="top" secondItem="raM-tp-f3N" secondAttribute="top" id="Vw8-7S-dbE"/>
+                                            <constraint firstAttribute="bottom" secondItem="1Rg-cZ-CMb" secondAttribute="bottom" id="nxR-rK-EeX"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="avatar" destination="1Rg-cZ-CMb" id="P0V-Dh-Fns"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="zpi-iR-wBi" id="Bwt-NS-6FN"/>
+                                    <outlet property="delegate" destination="zpi-iR-wBi" id="b7M-2p-UTc"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Pqm-Ij-ldu"/>
+                    </view>
+                    <connections>
+                        <outlet property="imagesCollectionView" destination="ZWx-Gs-607" id="3w1-FX-MFp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZF-o7-n9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2693.5999999999999" y="73.313343328335833"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m4Q-Bx-5uM">
@@ -282,4 +343,7 @@
             <point key="canvasLocation" x="6" y="74"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PlaceholderAvatar" width="532" height="400"/>
+    </resources>
 </document>

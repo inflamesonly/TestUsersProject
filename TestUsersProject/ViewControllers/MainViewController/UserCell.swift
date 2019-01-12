@@ -26,6 +26,7 @@ class UserCell: UITableViewCell {
         self.emailLabel.text = user.email
         self.updateDateLabel.text = user.updatedDate
         self.createDateLabel.text = user.createdDate
+        self.avatarImageView.image = UIImage(named: "Placeholder")
         self.checkAvatarOrPlaceholder(path: user.imageUrl)
     }
     
@@ -38,10 +39,6 @@ class UserCell: UITableViewCell {
     }
     
     func addAvatar (path : String) {
-        Alamofire.request(path).responseImage { response in
-            if let image = response.result.value {
-                self.avatarImageView.image = image
-            }
-        }
+        self.avatarImageView.af_setImage(withURL: URL(string: path)!, placeholderImage: UIImage(named: "Placeholder"))
     }
 }
